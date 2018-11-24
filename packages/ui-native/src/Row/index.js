@@ -5,9 +5,7 @@ import * as row from '@emcasa/ui/lib/components/Row'
 
 import {omitLayoutProps} from '../utils/omitProps'
 
-const Row = styled(
-  omitLayoutProps(({innerRef, ...props}) => <View ref={innerRef} {...props} />)
-)`
+const Row = styled(omitLayoutProps(View))`
   ${row.container};
 `
 

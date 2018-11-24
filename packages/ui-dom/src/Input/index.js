@@ -53,7 +53,7 @@ const Input = React.forwardRef(
             </Text>
           </SupportingView>
         )}
-        <TextInput {...props} innerRef={ref} />
+        <TextInput {...props} ref={ref} />
         {!hideErrorView && (
           <SupportingView>
             <ErrorText inline fontSize="small">

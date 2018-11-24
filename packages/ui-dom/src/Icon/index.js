@@ -1,14 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Icon, * as styles from '@emcasa/ui/lib/components/Icon'
 
 const IconComponent = styled(
-  Icon(({icon, size, color, style, className, id, innerRef, ...props}) => (
+  Icon(({icon, size, color, style, className, id, ...props}) => (
     <div style={style} className={className} id={id}>
       <svg
-        ref={innerRef}
         height={size}
         version="1.1"
         viewBox={`0 0 ${icon.width} ${icon.height}`}

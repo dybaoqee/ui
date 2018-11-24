@@ -79,7 +79,7 @@ export default styled(
           <RCTView style={{position: 'relative'}}>
             <Row
               collapsable={false}
-              innerRef={this.button}
+              ref={this.button}
               style={style}
               onLayout={props.focused ? this.updateLayout : undefined}
             >

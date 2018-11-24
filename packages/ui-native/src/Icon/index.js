@@ -6,10 +6,9 @@ import {Svg, Path} from 'react-native-svg'
 import Icon, * as styles from '@emcasa/ui/lib/components/Icon'
 
 const IconComponent = styled(
-  Icon(({icon, size, color, style, innerRef, ...props}) => (
+  Icon(({icon, size, color, style, ...props}) => (
     <View style={style}>
       <Svg
-        ref={innerRef}
         height={size}
         width={size + 5}
         version="1.1"
