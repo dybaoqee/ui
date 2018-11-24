@@ -1,12 +1,9 @@
 import React from 'react'
-import {
-  ThemeProvider,
-  injectGlobal as styledInjectGlobal
-} from 'styled-components'
-import injectGlobal from '@emcasa/ui-dom/src/global-styles'
+import {ThemeProvider, createGlobalStyle} from 'styled-components'
+import GlobalStyles from '@emcasa/ui-dom/src/GlobalStyles'
 import theme from '@emcasa/ui'
 
-styledInjectGlobal`
+const GlobalDoczStyle = createGlobalStyle`
   * {
     font-family: 'FaktSoftPro-Normal';
     -webkit-font-smoothing: antialiased;
@@ -17,7 +14,13 @@ styledInjectGlobal`
  * Docz Wrapper.
  */
 const Wrapper = ({children}) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <>
+      <GlobalDoczStyle />
+      <GlobalStyles />
+      {children}
+    </>
+  </ThemeProvider>
 )
 
 export default Wrapper
